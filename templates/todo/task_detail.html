@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-2xl font-bold mb-4">{{ task.title }}</h1>
+      <p class="text-gray-600 mb-2">{{ task.datetime }}</p>
+      <p class="mb-4">{{ task.content }}</p>
+
+      <div class="mb-4">
+        <strong>Deadline:</strong>
+        {% if task.deadline %}
+          {{ task.deadline }}
+        {% else %}
+          Not specified
+        {% endif %}
+      </div>
+
+      <div class="mb-4">
+        <strong>Tags:</strong>
+        {% for tag in task.tags.all %}
+          <span
+              class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{{ tag.name }}</span>
+        {% endfor %}
+      </div>
+
+      <div class="mb-4">
+        <strong>Status:</strong>
+        {% if task.is_done %}
+          <span class="inline-block bg-green-200 text-green-800 px-2 py-1 rounded-full">Done</span>
+        {% else %}
+          <span class="inline-block bg-red-200 text-red-800 px-2 py-1 rounded-full">Not Done</span>
+        {% endif %}
+      </div>
+
+      <a href="{% url 'todo:task-update' task.pk %}"
+         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Edit</a>
+
+      <a href="{% url 'todo:task-delete' task.pk %}"
+         class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">Delete</a>
+
+    </div>
+  </div>
+{% endblock %}
