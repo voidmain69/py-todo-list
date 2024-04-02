@@ -1,0 +1,88 @@
+[
+  {
+    "model": "todo.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Health"
+    }
+  },
+  {
+    "model": "todo.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Home"
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 5,
+    "fields": {
+      "title": "Attend Team Meeting",
+      "content": "Participate in the weekly team meeting and provide updates on current projects.",
+      "datetime": "2024-04-03T09:30:00Z",
+      "deadline": null,
+      "is_done": false,
+      "tags": [3]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 6,
+    "fields": {
+      "title": "Exercise",
+      "content": "Go for a 30-minute run in the park.",
+      "datetime": "2024-04-02T18:00:00Z",
+      "deadline": null,
+      "is_done": false,
+      "tags": [4]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 7,
+    "fields": {
+      "title": "Pay Utility Bills",
+      "content": "Pay electricity, water, and internet bills for this month.",
+      "datetime": "2024-04-04T15:00:00Z",
+      "deadline": "2024-04-07T15:00:00Z",
+      "is_done": false,
+      "tags": [4]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 8,
+    "fields": {
+      "title": "Read Book",
+      "content": "Spend 1 hour reading 'The Great Gatsby' novel.",
+      "datetime": "2024-04-02T20:00:00Z",
+      "deadline": null,
+      "is_done": false,
+      "tags": [3]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 9,
+    "fields": {
+      "title": "Update Resume",
+      "content": "Review and update professional experience and skills on the resume.",
+      "datetime": "2024-04-05T14:00:00Z",
+      "deadline": null,
+      "is_done": false,
+      "tags": [4]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 10,
+    "fields": {
+      "title": "Fix Kitchen Sink",
+      "content": "Call plumber to fix the leaking kitchen sink.",
+      "datetime": "2024-04-06T10:00:00Z",
+      "deadline": null,
+      "is_done": false,
+      "tags": [4]
+    }
+  }
+]
